@@ -1,17 +1,16 @@
-let comp_result;
+let outcomes = Array("Rock", "Paper", "Scissors");
 
 function computerPlay() {
-    if (Math.random()<.333) {
-        let comp_result = 'Rock'
+    if (Math.floor(Math.random()*outcomes.length) === 0) {
+        let outcome = outcomes[0];
+        alert(outcomes[0]);
     }
-    else if (Math.random()>.333 && Math.random()<.666) {
-        let comp_result = 'Paper'
+    else if (Math.floor(Math.random()*outcomes.length) === 1) {
+        let outcome = outcomes[1];
+        alert(outcomes[1]);
     }
-    else if (Math.random()>.666) {
-        let comp_result = 'Scissors'
+    else {
+        let outcome = outcomes[2];
+        alert(outcomes[2]);
     }
 }
-
-computerPlay();
-
-alert(comp_result);
