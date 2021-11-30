@@ -1,28 +1,40 @@
+let comp = 1;
+
+let user = 1;
+
 function playRound() {
 
-    const playerSelection = prompt('Enter your choice!'," ");
+    let string = prompt('Enter your choice!'," ");
+
+    const playerSelection = string.toLowerCase();
 
     const computerSelection = computerPlay();
 
     if (playerSelection === computerSelection) {
-        return result = 'It\'s a tie!';
+        console.log('It\'s a tie!');
     }
-    else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
-        return result =  'You Lose! Paper beats Rock';
+    else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        console.log('You Lose! Paper beats Rock');
+        comp++;
     }
-    else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
-        return result = 'You Win! Rock beats Scissors';
+    else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        console.log('You Win! Rock beats Scissors');
+        user++;
     }
-    else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
-        return result =  'You Win! Paper beats Rock';
+    else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        console.log('You Win! Paper beats Rock');
+        user++;
     }
-    else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
-        return result =  'You Lose! Scissors beats Paper';
+    else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        console.log('You Lose! Scissors beats Paper');
+        comp++;
     }
-    else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-        return result =  'You Lose! Rock beats Scissors';
+    else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        console.log('You Lose! Rock beats Scissors');
+        comp++;
     }
-    else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
-        return result =  'You Win! Scissors beats Paper';
+    else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        console.log('You Win! Scissors beats Paper');
+        user++;
     }
 }

@@ -1,4 +1,4 @@
-let outcomes = Array("Rock", "Paper", "Scissors");
+let outcomes = Array("rock", "paper", "scissors");
 
 let outcome;
 
