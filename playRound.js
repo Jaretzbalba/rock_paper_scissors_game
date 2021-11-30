@@ -1,6 +1,6 @@
-let comp = 1;
+let comp = 0;
 
-let user = 1;
+let user = 0;
 
 function playRound() {
 
