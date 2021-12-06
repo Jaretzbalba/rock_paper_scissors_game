@@ -1,26 +1,16 @@
 function game() {
 
-    let rounds = prompt('How many rounds would you like to play?', ' ');
-    let majority_win = majority(rounds);
+    let winAmount = prompt('How many wins to be the Champion?', '5');
 
-    alert(`The first to ${majority_win} wins or the most is the Rock, Papper, Scissors Champion!`);
+    let i = 0; 
 
-    for (i=0; i<rounds; i++) {
-    console.log(playRound());
-        if (user === majority_win) {
-        return console.log('You are the Champion!');
-        } else if (comp === majority_win) {
-        return console.log('You Lose! Better luck next time!'); 
-        } else {  
+    while (user < winAmount && comp < winAmount) {
+        (playRound());
+        if (user == winAmount) {
+            console.log("You are the Champion!");
+            } else if (comp == winAmount) {
+            console.log("You Lose! Better luck next time!"); 
+            }
         }
-    }
-
-    if (user > comp) {
-    console.log('You are the Champion!');
-    } else if (user < comp) {
-    console.log('You Lose! Better luck next time!'); 
-    } else if (user === comp) {
-    console.log(`It\'s a Tie! C'mon you can't beat a robot?`);
-    }
-
+    i++;
 }
